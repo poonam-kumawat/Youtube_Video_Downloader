@@ -32,7 +32,7 @@ const Youtube = () => {
   };
   return (
     <div>
-      {/* <Header /> */}
+
       <div className="md:h-screen md:bg-[#F0EDE9]">
         <Header />
         <div className="relative">
@@ -57,85 +57,7 @@ const Youtube = () => {
                 Download
               </button>
             </div>
-            {/* </form> */}
           </div>
-          {/* <div>
-            {data !== null ? (
-              <div className="p2 grid justify-center">
-                <div className="flex justify-center">
-                  <iframe width={272} src={`${data.data.url}`} title="video" />
-                </div>
-
-                <div className="grid grid-cols-2 md:grid-cols-3">
-                  {data?.data.info.map((formatName: any, index: any) => {
-                    if (
-                      formatName.mimeType.includes("video/mp4") ||
-                      formatName.mimeType.includes("audio/mp4")
-                    ) {
-                      return (
-                        <div
-                          key={index}
-                          className="p-3 flex justify-center border-none"
-                        >
-                          <a
-                            href={formatName.url}
-                            target="_blank"
-                            download
-                            className="outline-none z-10 cursor-pointer border-2 p-2 hover:border-[#4DBD7A]"
-                          >
-                            {formatName.mimeType.split(";")[0] + " "}
-                            {formatName.hasVideo ? formatName.height + "p" : ""}
-                          </a>
-                        </div>
-                      );
-                    }
-                  })}
-                </div>
-                <div className="p2 grid justify-center">
-                  <div className="flex justify-center gap-3 mt-4">
-                    <select
-                      className="form-control border-2 w-[200px] md:w-[400px] border-[#828282] p-2 rounded-[5px]"
-                      onChange={handleFormatChange}
-                    >
-                      <option value="">Select a format</option>
-                      {data?.data.info.map((formatName: any, index: any) => {
-                        if (
-                          formatName.mimeType.includes("video/mp4") ||
-                          formatName.mimeType.includes("audio/mp4")
-                        ) {
-                          return (
-                            <option key={index} value={index}>
-                              {formatName.mimeType.split(";")[0] + " "}
-                              {formatName.hasVideo
-                                ? formatName.height + "p"
-                                : ""}
-                            </option>
-                          );
-                        }
-                      })}
-                    </select>
-                    {selectedFormat && (
-                      <div className="flex justify-center ">
-                        <a
-                          href={selectedFormat.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          download
-                          className=" justify-center outline-none z-10 cursor-pointer border-2 p-2 hover:border-[#4DBD7A] bg-[#4DBD7A] text-white rounded-[5px]"
-                        >
-                          Download
-                        </a>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ) : (
-              <div className=" text-red-700 font-bold mt-10">
-                Paste a link to download video
-              </div>
-            )}
-          </div> */}
           {data !== null ? (
             <div className="flex justify-center items-center p-4">
               {/* Card Container */}
@@ -248,8 +170,6 @@ const Youtube = () => {
             <div className="">
               <img src="./Group3.svg" alt="img"></img>
               <p>
-                {/* Discover the simplest method for downloading YouTube videos
-                online: */}
                 Paste the link of the YouTube video you intend to download.
               </p>
             </div>
@@ -265,10 +185,6 @@ const Youtube = () => {
                 Click download button it will redirect to new page where you can download the video or audio by simply clicking three dots in video.
               </p>
             </div>
-
-            {/* <div>
-              <img src="./hscreen.svg" alt="img"></img>
-            </div> */}
           </div>
         </div>
       </section>
