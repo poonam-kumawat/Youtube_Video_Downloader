@@ -110,7 +110,7 @@ const Youtube = () => {
                       download
                       className="bg-[#4DBD7A] text-white px-4 py-2 rounded"
                     >
-                     {t("Download")}
+                      {t("Download")}
                     </a>
                   )}
                 </div>
@@ -164,15 +164,15 @@ const Youtube = () => {
           <div className="grid md:grid-cols-3 gap-10 p-10 md:p-0 m-auto mt-5">
             <div className="">
               <img src="./Group3.svg" alt="img"></img>
-              <p>{t("step1")}</p>
+              <p className="mt-4">{t("step1")}</p>
             </div>
             <div className="">
               <img src="./Group6.svg" alt="img"></img>
-              <p>{t("step2")}</p>
+              <p className="mt-4">{t("step2")}</p>
             </div>
             <div className="">
               <img src="./Group8.svg" alt="img"></img>
-              <p>{t("step3")}</p>
+              <p className="mt-4">{t("step3")}</p>
             </div>
           </div>
         </div>
