@@ -15,10 +15,22 @@ const allowedOrigins = [
 const options: cors.CorsOptions = {
   origin: allowedOrigins,
 };
+app.use((req, res, next) => {
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://youtubesave-downloader.vercel.app/"
+  ); 
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 
 app.use(cors(options));
 app.use(express.json());
 app.use("/download", downloadRoute);
+
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Express + TypeScript Server");
