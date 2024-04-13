@@ -23,13 +23,11 @@ const Youtube = () => {
     try {
       const data: any = await getDownloads(urlValue);
       setData(data);
-      console.log(data);
       setUrlValue("");
     } catch (error) {
       console.error(error);
     }
     setData(data);
-    console.log(data);
     setUrlValue("");
   };
   return (
