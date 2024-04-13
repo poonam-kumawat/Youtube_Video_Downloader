@@ -8,7 +8,10 @@ const app: Express = express();
 app.set("view engine", "ejs");
 configDotenv();
 
-const allowedOrigins = ["http://localhost:3000"];
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://youtubesave-downloader.vercel.app/",
+];
 const options: cors.CorsOptions = {
   origin: allowedOrigins,
 };
