@@ -60,9 +60,9 @@ const Youtube = () => {
           {data !== null ? (
             <div className="flex justify-center items-center p-4">
               {/* Card Container */}
-              <div className="grid md:flex h-[158px]  mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+              <div className="grid md:flex mx-auto bg-white rounded-lg shadow-md overflow-hidden">
                 {/* Video */}
-                <div className="flex-1">
+                <div className="flex-1 h-[158px]">
                   <iframe
                     width={272}
                     height={158}
@@ -76,7 +76,7 @@ const Youtube = () => {
                 <div className="flex flex-col items-center p-4">
                   {/* Format */}
                   <div className="mb-4">
-                    <h3 className="text-lg font-semibold">{t("Format")}</h3>
+                    <h3 className="text-lg font-semibold mb-2">{t("Format")}</h3>
                     <select
                       className="form-control border-2 w-[200px] md:w-[400px] border-[#828282] p-2 rounded-[5px]"
                       onChange={handleFormatChange}
@@ -141,12 +141,12 @@ const Youtube = () => {
         </div>
       </div>
       <section>
-        <div className="h-screen  md:p-20">
-          <p className="text-2xl md:text-3xl font-semibold my-10">
+        <div className="md:h-screen  md:p-20">
+          <p className="text-2xl md:text-3xl px-6 md:px-0 font-semibold my-10">
             {t("What is YoutubeSave and why to use?")}
           </p>
           <div className="grid items-center md:grid md:grid-cols-2">
-            <div className="md:text-left text-xl">
+            <div className="md:text-left text-xl px-6 md:px-0 ">
               <p>{t("description")}</p>
             </div>
             <div>
