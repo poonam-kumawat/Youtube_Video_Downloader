@@ -10,27 +10,22 @@ configDotenv();
 
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://youtubesave-downloader.vercel.app/",
+  "https://youtubesave-downloader.vercel.app",
 ];
 const options: cors.CorsOptions = {
-  origin: allowedOrigins,
+  // origin: allowedOrigins,
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  methods: ["GET", "POST", "OPTIONS", "PUT", "PATCH", "DELETE"],
+  allowedHeaders: ["X-Requested-With", "content-type"],
 };
-app.use(function (req, res, next) {
-  res.setHeader(
-    "Access-Control-Allow-Origin",
-    "https://youtubesave-downloader.vercel.app/"
-  );
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, OPTIONS, PUT, PATCH, DELETE"
-  );
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "X-Requested-With,content-type"
-  );
 
-  next();
-});
+
 
 app.use(cors(options));
 app.use(express.json());
