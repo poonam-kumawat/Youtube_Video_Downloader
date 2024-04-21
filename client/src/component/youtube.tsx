@@ -60,11 +60,12 @@ const Youtube = () => {
           {data !== null ? (
             <div className="flex justify-center items-center p-4">
               {/* Card Container */}
-              <div className="grid md:flex  mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+              <div className="grid md:flex h-[158px]  mx-auto bg-white rounded-lg shadow-md overflow-hidden">
                 {/* Video */}
                 <div className="flex-1">
                   <iframe
                     width={272}
+                    height={158}
                     src={`${data.data.url}`}
                     title="video"
                     className="m-0 p-0"
